@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
 // ---------------------------------------------------------------------------
 // Terminal content — full sequence shown once on startup
 // ---------------------------------------------------------------------------
 export const startupBlocks = [
-  { command: "$ whoami", output: ["chuhoanglong"] },
-  { command: "$ pwd", output: ["~/portfolio"] },
+  {command: "$ whoami", output: ["chuhoanglong"]},
+  {command: "$ pwd", output: ["~/portfolio"]},
   {
     command: "$ ls",
     output: [
@@ -20,16 +20,15 @@ export const startupBlocks = [
       "contact/",
     ],
   },
-  { command: "$ uptime", output: ["Portfolio running..."] },
-  { command: '$ echo "Hello, World!"', output: ["Hello, World!"] },
+  {command: "$ uptime", output: ["Portfolio running..."]},
 ];
 
 // ---------------------------------------------------------------------------
 // Timing constants (ms)
 // ---------------------------------------------------------------------------
-const TYPE_SPEED = 32;     // ms per character
-const LINE_DELAY = 180;    // ms between lines in a block
-const BLOCK_DELAY = 380;   // ms pause between blocks
+const TYPE_SPEED = 32; // ms per character
+const LINE_DELAY = 180; // ms between lines in a block
+const BLOCK_DELAY = 380; // ms pause between blocks
 // Hold after last line before starting the fade-out animation
 const COMPLETE_HOLD = 700; // ms
 
@@ -88,7 +87,7 @@ export default function useStartupTerminal() {
       // Initialise the slot
       setLines((prev) => {
         const next = [...prev];
-        next[lineIndex] = { text: "", isCommand };
+        next[lineIndex] = {text: "", isCommand};
         return next;
       });
 
@@ -98,7 +97,7 @@ export default function useStartupTerminal() {
           const partial = text.slice(0, charIdx);
           setLines((prev) => {
             const next = [...prev];
-            next[lineIndex] = { text: partial, isCommand };
+            next[lineIndex] = {text: partial, isCommand};
             return next;
           });
           charIdx++;
@@ -128,7 +127,10 @@ export default function useStartupTerminal() {
 
       schedule(() => {
         typeString(outputLines[idx], false, lineIdx, () => {
-          schedule(() => revealOutputLines(outputLines, idx + 1, onAllDone), LINE_DELAY);
+          schedule(
+            () => revealOutputLines(outputLines, idx + 1, onAllDone),
+            LINE_DELAY,
+          );
         });
       }, LINE_DELAY);
     }
@@ -143,7 +145,7 @@ export default function useStartupTerminal() {
         return;
       }
 
-      const { command, output } = startupBlocks[blockIdx];
+      const {command, output} = startupBlocks[blockIdx];
       const cmdLineIdx = globalLineIdx;
       globalLineIdx++;
 
@@ -162,5 +164,5 @@ export default function useStartupTerminal() {
     };
   }, [prefersReducedMotion]);
 
-  return { lines, showCursor, isDone };
+  return {lines, showCursor, isDone};
 }
