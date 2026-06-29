@@ -1,0 +1,8 @@
+name = "portfolio-contact-api"
+main = "src/index.js"
+compatibility_date = "2026-06-26"
+
+[vars]
+CONTACT_TO_EMAIL = "hoanglongchu006@gmail.com"
+CONTACT_FROM_EMAIL = "no-reply <no-reply@hlongdev.com>"
+CORS_ALLOWED_ORIGINS = "http://localhost:5173,https://hlongdev.com,https://www.hlongdev.com"

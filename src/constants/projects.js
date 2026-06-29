@@ -1,0 +1,103 @@
+export const projects = [
+  {
+    title: "Learning Platform with Gemini API",
+    description:
+      "Backend-focused learning platform with AI assistance, course management, quizzes, class workflows, and admin features.",
+    image: "",
+    role: "Project Leader",
+    category: "University Project",
+    status: "Completed",
+    duration: "Jan 2026 - May 2026",
+    features: [
+      "Authentication, course management, quiz, AI chat, class management, and admin modules.",
+      "Gemini API integration for AI-powered student assistance.",
+      "Redis caching and Cloudinary media storage.",
+      "JWT, OTP verification, security logging, and RBAC authorization.",
+    ],
+    problemsSolved: [
+      "Organized a large FastAPI backend into 18 routers with clear feature ownership.",
+      "Resolved 20 failing tests using mock repository fixtures and precise assertion patterns.",
+      "Supported expected classroom usage with 20-50 concurrent users.",
+    ],
+    metrics: [
+      "30+ RESTful API endpoints",
+      "18 FastAPI routers",
+      "167/167 pytest tests passing",
+      "100% test pass rate",
+    ],
+    achievements: [
+      "Built and maintained 30+ RESTful API endpoints across 18 routers.",
+      "Covered authentication, course management, quizzes, AI chat, class management, and admin features.",
+      "Supported 20-50 concurrent users.",
+      "Delivered pytest suite with 100% pass rate, 167/167 tests.",
+      "Resolved 20 failing tests using mock repository fixtures and precise assertion patterns.",
+    ],
+    stack: ["FastAPI", "Python", "MongoDB", "Redis", "Gemini API", "Cloudinary", "JWT", "RBAC", "OTP", "pytest"],
+    githubUrl: "",
+    liveUrl: "",
+  },
+  {
+    title: "Map Service Management System",
+    description:
+      "Full-stack mapping platform for location search, map visualization, geospatial data management, and POI administration.",
+    image: "",
+    role: "Full-stack Developer",
+    category: "University Project",
+    status: "Completed",
+    duration: "Oct 2025 - Dec 2025",
+    features: [
+      "Location search",
+      "Map visualization",
+      "Geospatial data management",
+      "Points-of-interest CRUD",
+    ],
+    problemsSolved: [
+      "Combined map visualization with administrative workflows for geographic data.",
+      "Created RESTful APIs and admin tools for managing POI records.",
+    ],
+    metrics: ["4 core features delivered"],
+    achievements: [
+      "Developed a full-stack mapping platform.",
+      "Delivered 4 core features: location search, map visualization, geospatial data management, and POI CRUD.",
+      "Engineered RESTful APIs and admin tools for geographic data management.",
+    ],
+    stack: ["Python", "PostgreSQL", "Flask", "Leaflet", "OpenStreetMap", "Streamlit"],
+    githubUrl: "",
+    liveUrl: "",
+  },
+  {
+    title: "Hotel Management System",
+    description:
+      "Hotel operations system covering room management, booking workflows, service tracking, billing, and role-based access.",
+    image: "",
+    role: "Back-end Developer",
+    category: "University Project",
+    status: "Completed",
+    duration: "Feb 2025 - Jun 2025",
+    features: [
+      "Room management",
+      "Booking workflows",
+      "Service tracking",
+      "Billing workflows",
+      "Role-based access control",
+    ],
+    problemsSolved: [
+      "Modeled hotel operations across normalized SQL Server tables.",
+      "Separated permissions for admin, staff, and customer workflows.",
+    ],
+    metrics: [
+      "7 normalized SQL Server tables",
+      "4-person team",
+      "3 RBAC roles: admin, staff, customer",
+    ],
+    achievements: [
+      "Built RESTful APIs across 7 normalized SQL Server tables.",
+      "Covered room management, booking workflows, service tracking, and billing.",
+      "Worked in a 4-person team.",
+      "Enforced RBAC across 3 roles: admin, staff, and customer.",
+    ],
+    stack: ["C#", "ASP.NET Core", "Vue", "Microsoft SQL Server", "ASP.NET Core Identity"],
+    githubUrl: "",
+    liveUrl: "",
+  },
+];

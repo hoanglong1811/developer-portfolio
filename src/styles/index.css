@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  color-scheme: dark;
+  --background: #0b0b0b;
+  --foreground: #eaeaea;
+  --card: #151515;
+  --card-foreground: #eaeaea;
+  --popover: #151515;
+  --popover-foreground: #eaeaea;
+  --primary: #ff5a1f;
+  --primary-foreground: #0b0b0b;
+  --secondary: #111111;
+  --secondary-foreground: #eaeaea;
+  --muted: #111111;
+  --muted-foreground: #8b8b8b;
+  --accent: #ff5a1f;
+  --accent-foreground: #0b0b0b;
+  --destructive: #ef4444;
+  --border: #232323;
+  --input: #232323;
+  --ring: #ff5a1f;
+  --success: #22c55e;
+  --tech-bg: #121212;
+  --tech-border: #2b2b2b;
+  --tech-text: #bebebe;
+  --surface: var(--card);
+  --surface-secondary: var(--secondary);
+  --border-muted: var(--tech-border);
+  --text-primary: var(--foreground);
+  --text-secondary: var(--tech-text);
+  --text-muted: var(--muted-foreground);
+  --accent-hover: #ff6d3a;
+  --accent-active: var(--accent);
+  --selection-bg: rgba(255, 90, 31, 0.28);
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --success-bg: #101a13;
+  --success-border: #1f3d2a;
+  --success-text: #9ee7b6;
+  --radius: 0.375rem;
+  --section-y: 7rem;
+  font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme inline {
+  --font-sans: "IBM Plex Mono", "JetBrains Mono", "Fira Code", monospace;
+  --font-heading: "IBM Plex Mono", "JetBrains Mono", "Fira Code", monospace;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", "Fira Code", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-border-muted: var(--border-muted);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-active: var(--accent-active);
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-success-border: var(--success-border);
+  --color-success-text: var(--success-text);
+  --color-tech-bg: var(--tech-bg);
+  --color-tech-border: var(--tech-border);
+  --color-tech-text: var(--tech-text);
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+  scroll-padding-top: 5rem;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
