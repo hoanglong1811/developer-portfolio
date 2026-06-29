@@ -35,6 +35,12 @@ jobs:
         env:
           VITE_CONTACT_API_URL: ${{ vars.VITE_CONTACT_API_URL }}
 
+      - name: Check Environment Variable
+        run: |
+          echo "API URL: $VITE_CONTACT_API_URL"
+        env:
+          VITE_CONTACT_API_URL: ${{ vars.VITE_CONTACT_API_URL }}
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
